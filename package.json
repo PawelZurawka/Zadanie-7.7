@@ -21,15 +21,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/PawelZurawka/NPMlearning.git"
+    "url": "git+https://github.com/PawelZurawka/Zadanie-7.7"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/PawelZurawka/NPMlearning/issues"
+    "url": "https://github.com/PawelZurawka/Zadanie-7.7/issues"
   },
-  "homepage": "https://github.com/PawelZurawka/NPMlearning#readme",
+  "homepage": "https://github.com/PawelZurawka/Zadanie-7.7#readme",
   "devDependencies": {
     "autoprefixer-cli": "^1.0.0",
     "browser-sync": "^2.26.3",
