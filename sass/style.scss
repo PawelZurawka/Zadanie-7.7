@@ -1,7 +1,151 @@
-* {
+/*VARIABLES*/
+$color: #fed136;
+$font-color: #FFF;
+$font-color-second: #777777;
+$background-color: #F7F7F7;
+$hover-transparent: rgba(0, 0, 0, 0.8);
+
+$font: 'Montserrat', sans-serif;
+$font-second: 'Lora', serif;
+$font-third: 'Roboto Slab', serif;
+$font-size-base: 1rem;
+$font-size-1: $font-size-base * 4.6875; //75px
+$font-size-2: $font-size-base * 2.5; //40px
+$font-size-3: $font-size-base * 2; //32px
+$font-size-4: $font-size-base * 1.5; //24px
+$font-size-5: $font-size-base * 1.125; //18px
+$font-size-6: $font-size-base * 1; //16px
+$font-size-7: $font-size-base * 0.875; //14px
+
+$grid-columns: 12;
+
+/*MIXINS*/
+@mixin container () {
+    max-width: 940px;
+    margin: 0 auto;
+}
+
+/*GRID*/
+.row::before, 
+.row::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 10px;
+    min-height: 1px;
+}
+
+@for $i from 1 through $grid-columns {
+    .col-#{$i} {
+      width: percentage($i / $grid-columns);
+    }
+  }
+
+/*GLOBAL STYLES*/
+*{
     box-sizing: border-box;
 }
 
 body {
-    margin: 0 auto;
+    margin: 0;
+}
+
+/*section > .container {
+    margin: 100px auto;
+    text-align: center;
+}*/
+
+/*NAV*/
+.header {
+    overflow: auto;
+    
+    &__nav {
+        @include container;
+    }
+
+    &__logo {
+        display: block;
+        float: left;
+        padding: 15px 0;
+        margin-top: 20px;
+    }
+
+    &__list {
+        margin: 0;
+        margin-top: 20px;
+        padding: 0;
+        list-style-type: none;
+        float: right;
+    }
+
+    &__list-item {
+        display: inline-block;
+    }
+
+    &__link {
+        font-family: $font;
+        line-height: 60px;
+        padding: 0 20px;
+        display: block;
+        color: $font-color;
+        text-decoration: none;
+        text-transform: uppercase;
+        &:hover {
+            color: $color;
+        }
+    }
+}
+
+/*HERO*/
+.hero {
+    background-image: url('../images/hero.png');
+    opacity: rgba(0, 0, 0, 0.8);
+    background-size: cover;
+    height: 100vh;
+    position: relative;
+    bottom: 80px;
+    z-index: -1;
+
+    &__slogan {
+        display: flex;
+        flex-direction: column; 
+        text-align: center;
+        justify-content: center; 
+        align-items: center;
+        height: 100%;
+    }
+
+    &__title {
+        font-family: $font-second;
+        font-style: italic;
+        font-size: $font-size-2;
+        color: $font-color;
+        text-transform: capitalize;
+    }
+
+    &__subtitle {
+        font-family: $font;
+        font-size: $font-size-1;
+        color: $font-color;
+        text-transform: uppercase;
+        margin-top: 15px;
+        margin-bottom: 75px;
+    }
+
+    &__button {
+        background-color: $color;
+        color: $font-color;
+        font-family: $font;
+        font-weight: bold;
+        font-size: $font-size-5;
+        text-transform: uppercase;
+        height: 65px;
+        width: 240px;
+        border-radius: 5px;
+        border: none;
+    }
 }
