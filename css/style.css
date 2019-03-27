@@ -34,10 +34,6 @@
 
 body { margin: 0; }
 
-/*section > .container {
-    margin: 100px auto;
-    text-align: center;
-}*/
 /*NAV*/
 .header { overflow: auto; }
 
@@ -54,12 +50,16 @@ body { margin: 0; }
 .header__link:hover { color: #fed136; }
 
 /*HERO*/
-.hero { background-image: url("../images/hero.png"); opacity: rgba(0, 0, 0, 0.8); background-size: cover; height: 100vh; position: relative; bottom: 80px; z-index: -1; }
+.hero { background-image: url("../images/hero.png"); background-size: cover; height: 100vh; position: relative; bottom: 80px; z-index: -1; }
 
 .hero__slogan { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; text-align: center; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; height: 100%; }
 
-.hero__title { font-family: "Lora", serif; font-style: italic; font-size: 2.5rem; color: #FFF; text-transform: capitalize; }
+.hero__title { font-family: "Lora", serif; font-size: 2.5rem; color: #FFF; text-transform: capitalize; }
 
 .hero__subtitle { font-family: "Montserrat", sans-serif; font-size: 4.6875rem; color: #FFF; text-transform: uppercase; margin-top: 15px; margin-bottom: 75px; }
 
 .hero__button { background-color: #fed136; color: #FFF; font-family: "Montserrat", sans-serif; font-weight: bold; font-size: 1.125rem; text-transform: uppercase; height: 65px; width: 240px; border-radius: 5px; border: none; }
+
+.hero__button:hover { background-color: #F7F7F7; color: #fed136; }
+
+/*SERVICES*/

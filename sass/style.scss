@@ -54,11 +54,6 @@ body {
     margin: 0;
 }
 
-/*section > .container {
-    margin: 100px auto;
-    text-align: center;
-}*/
-
 /*NAV*/
 .header {
     overflow: auto;
@@ -103,7 +98,6 @@ body {
 /*HERO*/
 .hero {
     background-image: url('../images/hero.png');
-    opacity: rgba(0, 0, 0, 0.8);
     background-size: cover;
     height: 100vh;
     position: relative;
@@ -121,7 +115,6 @@ body {
 
     &__title {
         font-family: $font-second;
-        font-style: italic;
         font-size: $font-size-2;
         color: $font-color;
         text-transform: capitalize;
@@ -147,5 +140,11 @@ body {
         width: 240px;
         border-radius: 5px;
         border: none;
+        &:hover {
+            background-color: $background-color;
+            color: $color;
+        }
     }
 }
+
+/*SERVICES*/
