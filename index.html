@@ -14,29 +14,49 @@
 
 </head>
 <body>
-    <header class="header">
-      <nav class="header__nav">
-          <img class="header__logo" src="images/logo.png" alt="logo">
-              <ul class="header__list">
-                  <li class="header__list-item"><a class="header__link" href="#">home</a></li>
-                  <li class="header__list-item"><a class="header__link" href="#">services</a></li>
-                  <li class="header__list-item"><a class="header__link" href="#">portfolio</a></li>
-                  <li class="header__list-item"><a class="header__link" href="#">about</a></li>
-                  <li class="header__list-item"><a class="header__link" href="#">contact</a></li>
-              </ul>
-      </nav>
-    </header>
-    <section class="hero">
-        <div class="hero__slogan">
-            <h1 class="hero__title">welcome to our studio!</h1>
-            <h2 class="hero__subtitle">it's nice to meet you</h2>
-            <button class="hero__button">tell me more</button>
-        </div>
-    </section>
-    <section class="services">
-        <div class="services__container">
-
-        </div>
-    </section>
+    <div class=header__wrapper>
+        <header class="header">
+        <nav class="header__nav">
+            <img class="header__logo" src="images/logo.png" alt="logo">
+                <ul class="header__list">
+                    <li class="header__list-item"><a class="header__link" href="#">home</a></li>
+                    <li class="header__list-item"><a class="header__link" href="#">services</a></li>
+                    <li class="header__list-item"><a class="header__link" href="#">portfolio</a></li>
+                    <li class="header__list-item"><a class="header__link" href="#">about</a></li>
+                    <li class="header__list-item"><a class="header__link" href="#">contact</a></li>
+                </ul>
+        </nav>
+        </header>
+        <section class="hero">
+            <div class="hero__slogan">
+                <h1 class="hero__title">welcome to our studio!</h1>
+                <h2 class="hero__subtitle">it's nice to meet you</h2>
+                <button class="hero__button">tell me more</button>
+            </div>
+        </section>
+    </div>
+        <section class="services">
+            <div class="services__headline">
+                <h3 class="services__main-title">services</h3>
+                <p class='services__main-subtitle'>Proin iaculis purus consequat sem cure.</p>
+                <div class="row services__container">
+                    <div class="col-4 services__e-commerce">
+                        <button class="services__button"><i class="fa fa-shopping-basket services__icon"></i></button>
+                        <h4 class="services__title">E-Commerce</h4>
+                        <p class='services__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="col-4 services__responsive-web">
+                        <button class="services__button"><i class="fa fa-laptop services__icon"></i></button>
+                        <h4 class="services__title">Responsive Web</h4>
+                        <p class='services__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                    <div class="col-4 services__web-security">
+                        <button class="services__button"><i class="fa fa-lock services__icon"></i></button>
+                        <h4 class="services__title">Web Security</h4>
+                        <p class='services__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 </body>
 </html>
