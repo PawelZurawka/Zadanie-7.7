@@ -65,7 +65,7 @@ body { margin: 0; }
 /*SERVICES*/
 .services { text-align: center; }
 
-.services__main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0; margin-top: 100px; }
+.services__main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0; margin-top: 100px; padding-top: 60px; }
 
 .services__main-subtitle { font-family: "Lora", serif; font-style: italic; font-size: 1rem; margin-top: 5px; margin-bottom: 60px; }
 
@@ -78,3 +78,20 @@ body { margin: 0; }
 .services__title { font-family: "Montserrat", sans-serif; font-size: 1.125rem; margin-bottom: 15px; }
 
 .services__description { font-family: "Roboto Slab", serif; font-size: 0.875rem; }
+
+/*PORTFOLIO*/
+.portfolio { text-align: center; background-color: #F7F7F7; margin-top: 100px; }
+
+.portfolio__main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0; margin-top: 100px; padding-top: 60px; }
+
+.portfolio__main-subtitle { font-family: "Lora", serif; font-style: italic; font-size: 1rem; margin-top: 5px; margin-bottom: 60px; }
+
+.portfolio__container { max-width: 940px; margin: 0 auto; }
+
+.portfolio__wrapper { background-color: #fff; height: 100%; line-height: 0; }
+
+.portfolio__image { width: 100%; }
+
+.portfolio__title { font-size: 1.125rem; font-family: "Montserrat", sans-serif; text-transform: capitalize; margin-top: 35px; }
+
+.portfolio__description { font-family: "Lora", serif; font-size: 0.875rem; font-style: italic; text-transform: capitalize; margin-bottom: 30px; }
