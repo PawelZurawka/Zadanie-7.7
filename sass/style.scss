@@ -18,6 +18,7 @@ $font-size-6: $font-size-base * 1; //16px
 $font-size-7: $font-size-base * 0.875; //14px
 
 $grid-columns: 12;
+$grid-offset-columns: 11;
 
 /*MIXINS*/
 @mixin container () {
@@ -30,7 +31,6 @@ $grid-columns: 12;
     font-size: $font-size-2;
     text-transform: uppercase;
     margin-bottom: 0;
-    margin-top: 100px;
     padding-top: 60px;
 }
 
@@ -61,6 +61,12 @@ $grid-columns: 12;
       width: percentage($i / $grid-columns);
     }
   }
+
+@for $i from 1 through $grid-offset-columns {
+    .col-offset-#{i} {
+        margin-left: percentage($i / $grid-offset-columns);
+    }
+}
 
 /*GLOBAL STYLES*/
 *{
@@ -217,7 +223,7 @@ body {
 .portfolio {
     text-align: center;
     background-color: $background-color;
-    margin-top: 100px;
+    padding-bottom: 60px;
 
     &__main-title {
         @include main-title;
@@ -254,5 +260,60 @@ body {
         font-style: italic;
         text-transform: capitalize;
         margin-bottom: 30px;
+    }
+}
+
+/*ABOUT US*/
+.about-us {
+    text-align: center;
+
+    &__main-title {
+        @include main-title;
+    }
+
+    &__main-subtitle {
+        @include main-subtitle;
+    }
+
+    &__container {
+        @include container;
+    }
+
+    &__title {
+        font-family: $font;
+        font-size: $font-size-5;
+        text-transform: uppercase;
+        text-align: right;
+        margin-top: 15px;
+        margin-bottom: 0;
+    }
+
+    &__subtitle {
+        font-family: $font;
+        font-size: $font-size-5;
+        text-transform: capitalize;
+        text-align: right;
+        margin-top: 0;
+        margin-bottom: 0;
+    }
+
+    &__description {
+        font-family: $font-second;
+        font-size: $font-size-7;
+        font-style: italic;
+        text-align: right;
+    }
+
+    &__center-column {  
+        position: relative;
+        &::after {
+            content:'';
+            position: absolute;
+            height: 90px;
+            width: 3px;
+            background-color: #f1f1f1;
+            top: 193px;
+            right: 155px;
+        }
     }
 }

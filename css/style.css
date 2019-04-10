@@ -29,6 +29,28 @@
 
 .col-12 { width: 100%; }
 
+.col-offset-i { margin-left: 9.09091%; }
+
+.col-offset-i { margin-left: 18.18182%; }
+
+.col-offset-i { margin-left: 27.27273%; }
+
+.col-offset-i { margin-left: 36.36364%; }
+
+.col-offset-i { margin-left: 45.45455%; }
+
+.col-offset-i { margin-left: 54.54545%; }
+
+.col-offset-i { margin-left: 63.63636%; }
+
+.col-offset-i { margin-left: 72.72727%; }
+
+.col-offset-i { margin-left: 81.81818%; }
+
+.col-offset-i { margin-left: 90.90909%; }
+
+.col-offset-i { margin-left: 100%; }
+
 /*GLOBAL STYLES*/
 * { box-sizing: border-box; }
 
@@ -65,7 +87,7 @@ body { margin: 0; }
 /*SERVICES*/
 .services { text-align: center; }
 
-.services__main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0; margin-top: 100px; padding-top: 60px; }
+.services__main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0; padding-top: 60px; }
 
 .services__main-subtitle { font-family: "Lora", serif; font-style: italic; font-size: 1rem; margin-top: 5px; margin-bottom: 60px; }
 
@@ -80,9 +102,9 @@ body { margin: 0; }
 .services__description { font-family: "Roboto Slab", serif; font-size: 0.875rem; }
 
 /*PORTFOLIO*/
-.portfolio { text-align: center; background-color: #F7F7F7; margin-top: 100px; }
+.portfolio { text-align: center; background-color: #F7F7F7; padding-bottom: 60px; }
 
-.portfolio__main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0; margin-top: 100px; padding-top: 60px; }
+.portfolio__main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0; padding-top: 60px; }
 
 .portfolio__main-subtitle { font-family: "Lora", serif; font-style: italic; font-size: 1rem; margin-top: 5px; margin-bottom: 60px; }
 
@@ -95,3 +117,22 @@ body { margin: 0; }
 .portfolio__title { font-size: 1.125rem; font-family: "Montserrat", sans-serif; text-transform: capitalize; margin-top: 35px; }
 
 .portfolio__description { font-family: "Lora", serif; font-size: 0.875rem; font-style: italic; text-transform: capitalize; margin-bottom: 30px; }
+
+/*ABOUT US*/
+.about-us { text-align: center; }
+
+.about-us__main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0; padding-top: 60px; }
+
+.about-us__main-subtitle { font-family: "Lora", serif; font-style: italic; font-size: 1rem; margin-top: 5px; margin-bottom: 60px; }
+
+.about-us__container { max-width: 940px; margin: 0 auto; }
+
+.about-us__title { font-family: "Montserrat", sans-serif; font-size: 1.125rem; text-transform: uppercase; text-align: right; margin-top: 15px; margin-bottom: 0; }
+
+.about-us__subtitle { font-family: "Montserrat", sans-serif; font-size: 1.125rem; text-transform: capitalize; text-align: right; margin-top: 0; margin-bottom: 0; }
+
+.about-us__description { font-family: "Lora", serif; font-size: 0.875rem; font-style: italic; text-align: right; }
+
+.about-us__center-column { position: relative; }
+
+.about-us__center-column::after { content: ''; position: absolute; height: 90px; width: 3px; background-color: #f1f1f1; top: 193px; right: 155px; }
