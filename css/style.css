@@ -1,6 +1,12 @@
-/*VARIABLES*/
-/*MIXINS*/
-/*GRID*/
+/* VARIABLES */
+/* REUSABLE CLASSES */
+.container { max-width: 940px; margin: 0 auto; }
+
+.main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; padding-top: 80px; margin: 0; }
+
+.main-subtitle { font-family: "Lora", serif; font-style: italic; font-size: 1rem; margin-top: 5px; padding-bottom: 60px; color: #777777; }
+
+/* GRID */
 .row::before, .row::after { content: ""; display: table; clear: both; }
 
 [class*="col-"] { float: left; padding: 10px; min-height: 1px; }
@@ -29,39 +35,39 @@
 
 .col-12 { width: 100%; }
 
-.col-offset-i { margin-left: 9.09091%; }
+.col-offset-1 { margin-left: 8.33333%; }
 
-.col-offset-i { margin-left: 18.18182%; }
+.col-offset-2 { margin-left: 16.66667%; }
 
-.col-offset-i { margin-left: 27.27273%; }
+.col-offset-3 { margin-left: 25%; }
 
-.col-offset-i { margin-left: 36.36364%; }
+.col-offset-4 { margin-left: 33.33333%; }
 
-.col-offset-i { margin-left: 45.45455%; }
+.col-offset-5 { margin-left: 41.66667%; }
 
-.col-offset-i { margin-left: 54.54545%; }
+.col-offset-6 { margin-left: 50%; }
 
-.col-offset-i { margin-left: 63.63636%; }
+.col-offset-7 { margin-left: 58.33333%; }
 
-.col-offset-i { margin-left: 72.72727%; }
+.col-offset-8 { margin-left: 66.66667%; }
 
-.col-offset-i { margin-left: 81.81818%; }
+.col-offset-9 { margin-left: 75%; }
 
-.col-offset-i { margin-left: 90.90909%; }
+.col-offset-10 { margin-left: 83.33333%; }
 
-.col-offset-i { margin-left: 100%; }
+.col-offset-11 { margin-left: 91.66667%; }
 
-/*GLOBAL STYLES*/
+.col-offset-12 { margin-left: 100%; }
+
+/* GLOBAL STYLES */
 * { box-sizing: border-box; }
 
 body { margin: 0; }
 
-/*NAV*/
+/* NAV */
 .header__wrapper { background-image: url("../images/hero.png"); background-size: cover; background-position: center; height: 100vh; }
 
 .header { overflow: auto; }
-
-.header__nav { max-width: 940px; margin: 0 auto; }
 
 .header__logo { display: block; float: left; padding: 15px 0; margin-top: 20px; }
 
@@ -73,7 +79,7 @@ body { margin: 0; }
 
 .header__link:hover { color: #fed136; }
 
-/*HERO*/
+/* HERO */
 .hero__slogan { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; text-align: center; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; height: 100%; margin-top: 25vh; }
 
 .hero__title { font-family: "Lora", serif; font-size: 2.5rem; color: #FFF; text-transform: capitalize; }
@@ -84,14 +90,8 @@ body { margin: 0; }
 
 .hero__button:hover { background-color: #F7F7F7; color: #fed136; cursor: pointer; }
 
-/*SERVICES*/
-.services { text-align: center; }
-
-.services__main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0; padding-top: 60px; }
-
-.services__main-subtitle { font-family: "Lora", serif; font-style: italic; font-size: 1rem; margin-top: 5px; margin-bottom: 60px; }
-
-.services__container { max-width: 940px; margin: 0 auto; }
+/* SERVICES */
+.services { text-align: center; padding-bottom: 80px; }
 
 .services__button { width: 80px; height: 80px; border-radius: 50%; border: 3px solid #fed136; font-size: 2.5rem; background-color: #fff; color: #fed136; transition: 0.75s; }
 
@@ -99,16 +99,10 @@ body { margin: 0; }
 
 .services__title { font-family: "Montserrat", sans-serif; font-size: 1.125rem; margin-bottom: 15px; }
 
-.services__description { font-family: "Roboto Slab", serif; font-size: 0.875rem; }
+.services__description { font-family: "Roboto Slab", serif; font-size: 0.875rem; color: #777777; }
 
-/*PORTFOLIO*/
-.portfolio { text-align: center; background-color: #F7F7F7; padding-bottom: 60px; }
-
-.portfolio__main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0; padding-top: 60px; }
-
-.portfolio__main-subtitle { font-family: "Lora", serif; font-style: italic; font-size: 1rem; margin-top: 5px; margin-bottom: 60px; }
-
-.portfolio__container { max-width: 940px; margin: 0 auto; }
+/* PORTFOLIO */
+.portfolio { text-align: center; background-color: #F7F7F7; padding-bottom: 80px; }
 
 .portfolio__wrapper { background-color: #fff; height: 100%; line-height: 0; }
 
@@ -116,23 +110,40 @@ body { margin: 0; }
 
 .portfolio__title { font-size: 1.125rem; font-family: "Montserrat", sans-serif; text-transform: capitalize; margin-top: 35px; }
 
-.portfolio__description { font-family: "Lora", serif; font-size: 0.875rem; font-style: italic; text-transform: capitalize; margin-bottom: 30px; }
+.portfolio__description { font-family: "Lora", serif; font-size: 0.875rem; font-style: italic; text-transform: capitalize; margin-bottom: 30px; color: #777777; }
 
 /*ABOUT US*/
-.about-us { text-align: center; }
+.about-us { text-align: center; padding-bottom: 80px; }
 
-.about-us__main-title { font-family: "Montserrat", sans-serif; font-size: 2.5rem; text-transform: uppercase; margin-bottom: 0; padding-top: 60px; }
+.about-us__title-left, .about-us__title-right { font-family: "Montserrat", sans-serif; font-size: 1.125rem; text-transform: uppercase; text-align: right; margin-top: 10px; margin-bottom: 0; }
 
-.about-us__main-subtitle { font-family: "Lora", serif; font-style: italic; font-size: 1rem; margin-top: 5px; margin-bottom: 60px; }
+.about-us__subtitle-left, .about-us__subtitle-right { font-family: "Montserrat", sans-serif; font-size: 1.125rem; text-transform: capitalize; text-align: right; margin-top: 0; margin-bottom: 0; }
 
-.about-us__container { max-width: 940px; margin: 0 auto; }
+.about-us__description-left, .about-us__description-right { font-family: "Roboto Slab", serif; font-size: 0.875rem; text-align: right; color: #777777; }
 
-.about-us__title { font-family: "Montserrat", sans-serif; font-size: 1.125rem; text-transform: uppercase; text-align: right; margin-top: 15px; margin-bottom: 0; }
+.about-us__title-right { text-align: left; }
 
-.about-us__subtitle { font-family: "Montserrat", sans-serif; font-size: 1.125rem; text-transform: capitalize; text-align: right; margin-top: 0; margin-bottom: 0; }
+.about-us__subtitle-right { text-align: left; }
 
-.about-us__description { font-family: "Lora", serif; font-size: 0.875rem; font-style: italic; text-align: right; }
+.about-us__description-right { text-align: left; }
+
+.about-us__photo { margin-bottom: 80px; }
 
 .about-us__center-column { position: relative; }
 
-.about-us__center-column::after { content: ''; position: absolute; height: 90px; width: 3px; background-color: #f1f1f1; top: 193px; right: 155px; }
+.about-us__center-column::after { content: ''; position: absolute; height: 110px; width: 3px; background-color: #f1f1f1; top: 193px; right: 155px; }
+
+.about-us__last-row { position: relative; }
+
+.about-us__span { position: absolute; font-size: 1.125rem; text-transform: uppercase; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #FFF; font-weight: bold; line-height: 30px; }
+
+/* TEAM */
+.team { text-align: center; background-color: #F7F7F7; padding-bottom: 60px; }
+
+.team__photo { border: 8px solid #FFF; border-radius: 50%; }
+
+.team__name { font-family: "Montserrat", sans-serif; font-size: 1rem; font-weight: bold; text-transform: capitalize; margin-bottom: 0; }
+
+.team__position { font-family: "Roboto Slab", serif; font-size: 0.875rem; color: #777777; text-transform: capitalize; margin-top: 0; }
+
+.team__description { max-width: 600px; text-align: center; margin: 20px auto; font-family: "Roboto Slab", serif; font-size: 1rem; color: #777777; }

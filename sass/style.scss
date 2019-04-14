@@ -1,4 +1,4 @@
-/*VARIABLES*/
+/* VARIABLES */
 $color: #fed136;
 $font-color: #FFF;
 $font-color-second: #777777;
@@ -18,31 +18,32 @@ $font-size-6: $font-size-base * 1; //16px
 $font-size-7: $font-size-base * 0.875; //14px
 
 $grid-columns: 12;
-$grid-offset-columns: 11;
+$grid-offset-columns: 12;
 
-/*MIXINS*/
-@mixin container () {
+/* REUSABLE CLASSES */
+.container {
     max-width: 940px;
     margin: 0 auto;
 }
 
-@mixin main-title {
+.main-title {
     font-family: $font;
     font-size: $font-size-2;
     text-transform: uppercase;
-    margin-bottom: 0;
-    padding-top: 60px;
+    padding-top: 80px;
+    margin: 0;
 }
 
-@mixin main-subtitle {
+.main-subtitle {
     font-family: $font-second;
     font-style: italic;
     font-size: $font-size-6;
     margin-top: 5px;
-    margin-bottom: 60px;
+    padding-bottom: 60px;
+    color: $font-color-second;
 }
 
-/*GRID*/
+/* GRID */
 .row::before, 
 .row::after {
     content: "";
@@ -63,12 +64,12 @@ $grid-offset-columns: 11;
   }
 
 @for $i from 1 through $grid-offset-columns {
-    .col-offset-#{i} {
+    .col-offset-#{$i} {
         margin-left: percentage($i / $grid-offset-columns);
     }
 }
 
-/*GLOBAL STYLES*/
+/* GLOBAL STYLES */
 *{
     box-sizing: border-box;
 }
@@ -77,7 +78,7 @@ body {
     margin: 0;
 }
 
-/*NAV*/
+/* NAV */
 .header__wrapper {
     background-image: url('../images/hero.png');
     background-size: cover;
@@ -87,10 +88,6 @@ body {
 
 .header {
     overflow: auto;
-    
-    &__nav {
-        @include container;
-    }
 
     &__logo {
         display: block;
@@ -125,7 +122,7 @@ body {
     }
 }
 
-/*HERO*/
+/* HERO */
 .hero {
     &__slogan {
         display: flex;
@@ -173,21 +170,10 @@ body {
     }
 }
 
-/*SERVICES*/
+/* SERVICES */
 .services {
     text-align: center;
-
-    &__main-title {
-        @include main-title;
-    }
-
-    &__main-subtitle {
-        @include main-subtitle;
-    }
-
-    &__container {
-        @include container;
-    }
+    padding-bottom: 80px;
 
     &__button {
         width: 80px;
@@ -215,27 +201,16 @@ body {
     &__description {
         font-family: $font-third;
         font-size: $font-size-7;
+        color: $font-color-second;
     }
 
 }
 
-/*PORTFOLIO*/
+/* PORTFOLIO */
 .portfolio {
     text-align: center;
     background-color: $background-color;
-    padding-bottom: 60px;
-
-    &__main-title {
-        @include main-title;
-    }
-
-    &__main-subtitle {
-        @include main-subtitle;
-    }
-
-    &__container {
-        @include container;
-    }
+    padding-bottom: 80px;
 
     &__wrapper {
         background-color: #fff;
@@ -260,35 +235,25 @@ body {
         font-style: italic;
         text-transform: capitalize;
         margin-bottom: 30px;
+        color: $font-color-second;
     }
 }
 
 /*ABOUT US*/
 .about-us {
     text-align: center;
+    padding-bottom: 80px;
 
-    &__main-title {
-        @include main-title;
-    }
-
-    &__main-subtitle {
-        @include main-subtitle;
-    }
-
-    &__container {
-        @include container;
-    }
-
-    &__title {
+    &__title-left {
         font-family: $font;
         font-size: $font-size-5;
         text-transform: uppercase;
         text-align: right;
-        margin-top: 15px;
+        margin-top: 10px;
         margin-bottom: 0;
     }
 
-    &__subtitle {
+    &__subtitle-left {
         font-family: $font;
         font-size: $font-size-5;
         text-transform: capitalize;
@@ -297,11 +262,29 @@ body {
         margin-bottom: 0;
     }
 
-    &__description {
-        font-family: $font-second;
+    &__description-left {
+        font-family: $font-third;
         font-size: $font-size-7;
-        font-style: italic;
         text-align: right;
+        color: $font-color-second;
+    }
+    &__title-right {
+        @extend .about-us__title-left;
+        text-align: left;
+    }
+
+    &__subtitle-right {
+        @extend .about-us__subtitle-left;
+        text-align: left; 
+    }
+
+    &__description-right {
+        @extend .about-us__description-left;
+        text-align: left;
+    }
+
+    &__photo {
+        margin-bottom: 80px;
     }
 
     &__center-column {  
@@ -309,11 +292,66 @@ body {
         &::after {
             content:'';
             position: absolute;
-            height: 90px;
+            height: 110px;
             width: 3px;
             background-color: #f1f1f1;
             top: 193px;
             right: 155px;
         }
     }
+
+    &__last-row {
+        position: relative;
+    }
+
+    &__span {
+        position: absolute;
+        font-size: $font-size-5;
+        text-transform: uppercase;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        color: #FFF;
+        font-weight: bold;
+        line-height: 30px;
+    }
 }
+
+/* TEAM */
+
+.team {
+    text-align: center;
+    background-color: $background-color;
+    padding-bottom: 60px;
+
+    &__photo {
+        border: 8px solid #FFF;
+        border-radius: 50%;
+    }
+
+    &__name {
+        font-family: $font;
+        font-size: $font-size-6;
+        font-weight: bold;
+        text-transform: capitalize;
+        margin-bottom: 0;
+    }
+
+    &__position {
+        font-family: $font-third;
+        font-size: $font-size-7;
+        color: $font-color-second;
+        text-transform: capitalize;
+        margin-top: 0;
+    }
+
+    &__description {
+        max-width: 600px;
+        text-align: center;
+        margin: 20px auto;
+        font-family: $font-third;
+        font-size: $font-size-6;
+        color: $font-color-second;
+    }
+}
+
