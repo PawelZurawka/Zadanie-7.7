@@ -1,3 +1,11 @@
+@font-face {
+    font-family: "Droid Serif";
+    src: url('../fonts/DroidSerif-Bold.ttf') format("ttf"),
+         url('../fonts/DroidSerif-BoldItalic.ttf') format("ttf"),
+         url('../fonts/DroidSerif-Italic.ttf') format("ttf"),
+         url('../fonts/DroidSerif-Regular.ttf') format("ttf");
+  }
+
 /* VARIABLES */
 $color: #fed136;
 $font-color: #FFF;
@@ -6,7 +14,7 @@ $background-color: #F7F7F7;
 $hover-transparent: rgba(0, 0, 0, 0.8);
 
 $font: 'Montserrat', sans-serif;
-$font-second: 'Lora', serif;
+$font-second: 'Droid Serif', serif;
 $font-third: 'Roboto Slab', serif;
 $font-size-base: 1rem;
 $font-size-1: $font-size-base * 4.6875; //75px
@@ -110,6 +118,7 @@ body {
 
     &__link {
         font-family: $font;
+        font-size: $font-size-7;
         line-height: 60px;
         padding: 0 20px;
         display: block;
@@ -136,6 +145,8 @@ body {
 
     &__title {
         font-family: $font-second;
+        font-style: italic;
+        font-weight: normal;
         font-size: $font-size-2;
         color: $font-color;
         text-transform: capitalize;
@@ -295,8 +306,9 @@ body {
             height: 110px;
             width: 3px;
             background-color: #f1f1f1;
-            top: 193px;
-            right: 155px;
+            top: 86%;
+            left: 50%;
+            transform: translate(-50%, -50%);
         }
     }
 
@@ -345,6 +357,47 @@ body {
         margin-top: 0;
     }
 
+    &__btn {
+        cursor: pointer;
+        font-size: 20px;
+        border: 3px solid #000;
+        border-radius: 50%;
+        padding: 15px;
+        width: 20px;
+        height: 20px;
+        background-color: #FFF;
+    }
+
+    &__icon {
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+
+    &__btn--twitter:hover {
+        background-color: #4099FF;
+        border: 3px solid #4099FF;
+        color: #FFF;
+    }
+
+    &__btn--facebook:hover {
+        background-color: #3B5998;
+        border: 3px solid #3B5998;
+        color: #FFF;
+    }
+
+    &__btn--google-plus:hover {
+        background-color: #DB5A3C;
+        border: 3px solid #DB5A3C;
+        color: #FFF;
+    }
+
+    &__btn--pinterest:hover {
+        background-color: #cb2028;
+        border: 3px solid #cb2028;
+        color: #FFF;
+    }
+
     &__description {
         max-width: 600px;
         text-align: center;
@@ -352,6 +405,29 @@ body {
         font-family: $font-third;
         font-size: $font-size-6;
         color: $font-color-second;
+        margin-bottom: 30px;
     }
 }
 
+/* LOGOS */
+
+.logos {
+    padding-left: 50px;
+
+    &__photo {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    }
+}
+
+/* CONTACT US*/
+
+.contact-us {
+    text-align: center;
+    padding-bottom: 80px;
+    background-image: url('../images/Map.png');
+
+    &__main-title {
+        color: #FFF;
+    }
+}
