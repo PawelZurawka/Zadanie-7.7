@@ -455,21 +455,7 @@ body {
     }
 
     &__submit-button {
-        background-color: $color;
-        color: $font-color;
-        font-family: $font;
-        font-weight: bold;
-        font-size: $font-size-5;
-        text-transform: uppercase;
-        padding: 21.5px 45px;
-        border-radius: 5px;
-        border: none;
-        transition: 0.75s;
-        &:hover {
-            background-color: $background-color;
-            color: $color;
-            cursor: pointer;
-        }
+        @extend .hero__button;
     }
 }
 

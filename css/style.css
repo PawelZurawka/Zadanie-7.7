@@ -88,9 +88,9 @@ body { margin: 0; }
 
 .hero__subtitle { font-family: "Montserrat", sans-serif; font-size: 4.6875rem; color: #FFF; text-transform: uppercase; margin-top: 15px; margin-bottom: 75px; }
 
-.hero__button { background-color: #fed136; color: #FFF; font-family: "Montserrat", sans-serif; font-weight: bold; font-size: 1.125rem; text-transform: uppercase; padding: 21.5px 45px; border-radius: 5px; border: none; transition: 0.75s; }
+.hero__button, .contact-us__submit-button { background-color: #fed136; color: #FFF; font-family: "Montserrat", sans-serif; font-weight: bold; font-size: 1.125rem; text-transform: uppercase; padding: 21.5px 45px; border-radius: 5px; border: none; transition: 0.75s; }
 
-.hero__button:hover { background-color: #F7F7F7; color: #fed136; cursor: pointer; }
+.hero__button:hover, .contact-us__submit-button:hover { background-color: #F7F7F7; color: #fed136; cursor: pointer; }
 
 /* SERVICES */
 .services { text-align: center; padding-bottom: 80px; }
@@ -177,10 +177,6 @@ body { margin: 0; }
 .contact-us__field::placeholder, .contact-us__message-field::placeholder { color: #BBBBBB; }
 
 .contact-us__message-field { resize: none; padding-bottom: 25px; }
-
-.contact-us__submit-button { background-color: #fed136; color: #FFF; font-family: "Montserrat", sans-serif; font-weight: bold; font-size: 1.125rem; text-transform: uppercase; padding: 21.5px 45px; border-radius: 5px; border: none; transition: 0.75s; }
-
-.contact-us__submit-button:hover { background-color: #F7F7F7; color: #fed136; cursor: pointer; }
 
 /* FOOTER */
 .footer { padding: 10px; }
