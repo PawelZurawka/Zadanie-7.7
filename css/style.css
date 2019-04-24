@@ -163,7 +163,7 @@ body { margin: 0; }
 .team__description { max-width: 600px; text-align: center; margin: 20px auto; font-family: "Roboto Slab", serif; font-size: 1rem; color: #777777; margin-bottom: 30px; }
 
 /* LOGOS */
-.logos__wrapper { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: distribute; justify-content: space-around; padding: 60px; }
+.logos__wrapper { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: distribute; justify-content: space-around; padding: 60px; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
 /* CONTACT US*/
 .contact-us { text-align: center; padding-bottom: 80px; background-color: #222; background-image: url("../images/Map-image.png"); background-repeat: no-repeat; background-position: right; }
