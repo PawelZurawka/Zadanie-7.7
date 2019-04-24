@@ -82,13 +82,13 @@ body { margin: 0; }
 .header__link:hover { color: #fed136; }
 
 /* HERO */
-.hero__slogan { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; text-align: center; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; height: 100%; margin-top: 25vh; }
+.hero__slogan { display: flex; flex-direction: column; text-align: center; justify-content: center; align-items: center; height: 100%; margin-top: 25vh; }
 
 .hero__title { font-family: "Droid Serif", serif; font-style: italic; font-weight: normal; font-size: 2.5rem; color: #FFF; text-transform: capitalize; }
 
 .hero__subtitle { font-family: "Montserrat", sans-serif; font-size: 4.6875rem; color: #FFF; text-transform: uppercase; margin-top: 15px; margin-bottom: 75px; }
 
-.hero__button { background-color: #fed136; color: #FFF; font-family: "Montserrat", sans-serif; font-weight: bold; font-size: 1.125rem; text-transform: uppercase; padding: 21.5px 45px; border-radius: 5px; border: none; transition: 0.75s; }
+.hero__button { background-color: #fed136; color: #FFF; font-family: "Montserrat", sans-serif; font-weight: bold; font-size: 1.125rem; text-transform: uppercase; height: 65px; width: 240px; border-radius: 5px; border: none; transition: 0.75s; }
 
 .hero__button:hover { background-color: #F7F7F7; color: #fed136; cursor: pointer; }
 
@@ -148,47 +148,28 @@ body { margin: 0; }
 
 .team__position { font-family: "Roboto Slab", serif; font-size: 0.875rem; color: #777777; text-transform: capitalize; margin-top: 0; }
 
-.team__btn, .footer__btn { cursor: pointer; font-size: 20px; border: 3px solid #000; border-radius: 50%; padding: 15px; width: 20px; height: 20px; background-color: #FFF; transition: 0.5s; }
+.team__btn { cursor: pointer; font-size: 20px; border: 3px solid #000; border-radius: 50%; padding: 15px; width: 20px; height: 20px; background-color: #FFF; transition: 0.5s; }
 
 .team__icon { top: 50%; left: 50%; transform: translate(-50%, -50%); }
 
-.team__btn--twitter:hover, .footer__btn--twitter:hover { background-color: #4099FF; border: 3px solid #4099FF; color: #FFF; }
+.team__btn--twitter:hover { background-color: #4099FF; border: 3px solid #4099FF; color: #FFF; }
 
-.team__btn--facebook:hover, .footer__btn--facebook:hover { background-color: #3B5998; border: 3px solid #3B5998; color: #FFF; }
+.team__btn--facebook:hover { background-color: #3B5998; border: 3px solid #3B5998; color: #FFF; }
 
-.team__btn--google-plus:hover, .footer__btn--google-plus:hover { background-color: #DB5A3C; border: 3px solid #DB5A3C; color: #FFF; }
+.team__btn--google-plus:hover { background-color: #DB5A3C; border: 3px solid #DB5A3C; color: #FFF; }
 
-.team__btn--pinterest:hover, .footer__btn--pinterest:hover { background-color: #cb2028; border: 3px solid #cb2028; color: #FFF; }
+.team__btn--pinterest:hover { background-color: #cb2028; border: 3px solid #cb2028; color: #FFF; }
 
 .team__description { max-width: 600px; text-align: center; margin: 20px auto; font-family: "Roboto Slab", serif; font-size: 1rem; color: #777777; margin-bottom: 30px; }
 
 /* LOGOS */
-.logos__wrapper { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: distribute; justify-content: space-around; padding: 60px; }
+.logos__wrapper { display: flex; align-items: center; justify-content: space-around; padding: 60px; }
 
 /* CONTACT US*/
 .contact-us { text-align: center; padding-bottom: 80px; background-color: #222; background-image: url("../images/Map-image.png"); background-repeat: no-repeat; background-position: right; }
 
 .contact-us__main-title { color: #FFF; }
 
-.contact-us__field, .contact-us__message-field { width: 100%; padding: 15.5px; margin-bottom: 28px; font-family: "Montserrat", sans-serif; font-size: 0.875rem; font-weight: bold; color: #BBBBBB; border-radius: 5px; border: none; }
+.contact-us__field { width: 100%; resize: none; padding: 15.5px; }
 
-.contact-us__field:-ms-input-placeholder, .contact-us__message-field:-ms-input-placeholder { color: #BBBBBB; }
-
-.contact-us__field::placeholder, .contact-us__message-field::placeholder { color: #BBBBBB; }
-
-.contact-us__message-field { resize: none; padding-bottom: 25px; }
-
-.contact-us__submit-button { background-color: #fed136; color: #FFF; font-family: "Montserrat", sans-serif; font-weight: bold; font-size: 1.125rem; text-transform: uppercase; padding: 21.5px 45px; border-radius: 5px; border: none; transition: 0.75s; }
-
-.contact-us__submit-button:hover { background-color: #F7F7F7; color: #fed136; cursor: pointer; }
-
-/* FOOTER */
-.footer { padding: 10px; }
-
-.footer__text { font-family: "Montserrat", sans-serif; font-size: 0.875rem; }
-
-.footer__buttons-wrapper { padding-top: 15px; }
-
-.footer__btn { background-color: #000; }
-
-.footer__icon { top: 50%; left: 50%; transform: translate(-50%, -50%); color: #FFF; }
+.contact-us__message-field { resize: none; width: 100%; }

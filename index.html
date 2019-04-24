@@ -202,49 +202,55 @@
         </section>
         <section class="logos">
             <div class="logos__container container">
-                <div class="row logos__row">
-                    <div class="col-3">
+                    <div class="logos__wrapper">
                         <img class="logos__photo" src="images/Envato.png" alt="Envato">
-                    </div>
-                    <div class="col-3">
                         <img class="logos__photo" src="images/WordPress.png" alt="WordPress">
-                    </div>
-                    <div class="col-3">
                         <img class="logos__photo" src="images/Tuts.png" alt="Tuts">
-                    </div>
-                    <div class="col-3">
                         <img class="logos__photo" src="images/Microlancer.png" alt="Microlancer">
                     </div>
-                </div>
             </div>
         </section>
         <section class="contact-us">
             <h3 class="contact-us__main-title main-title">contact us</h3>
             <p class="contact-us__main-subtitle main-subtitle">Proin iaculis purus consequat sem cure.</p>
             <div class="contact-us__form-container container">
-                <div class="row contact-us__row">
+                <div class="row contact-us__form">
                     <div class="col-6">
-                        <form action="/my-handling-form-page" method="post">
-                            <div>
-                                <label for="name">Name:</label>
-                                <input type="text" id="name" name="user_name">
+                        <form action="" method="post">
+                            <div class="contact-us__field-wrapper">
+                                <input class="contact-us__field" name="user_namename" type="text" id="name" placeholder="YOUR NAME *" required>
                             </div>
-                            <div>
-                                <label for="mail">E-mail:</label>
-                                <input type="email" id="mail" name="user_mail">
+                            <div class="contact-us__field-wrapper">
+                                <input class="contact-us__field" name="email" type="email" id="mail" placeholder="YOUR E-MAIL *" required>
+                            </div>
+                            <div class="contact-us__field-wrapper">
+                                <input class="contact-us__field" name="subject" type="text" id="subject" placeholder="SUBJECT">
                             </div>
                         </form>
                     </div>
                     <div class="col-6">
-                        <form action="/my-handling-form-page" method="post"> 
-                            <div>
-                                <label for="msg">Message:</label>
-                                <textarea id="msg" name="user_message"></textarea>
+                        <form action="" method="post"> 
+                            <div class="contact-us__message-field-wrapper">
+                                <textarea class="contact-us__message-field" id="msg" name="user_message" rows="9" placeholder="YOUR MESSAGE*" required></textarea>
                             </div>
                         </form>
                     </div>
                 </div>
+                <button class="contact-us__submit-button" type="submit">Send message</button>
             </div>
         </section>
+        <footer class="footer container">
+            <div class="row">
+                <div class="col-4">
+                    <p class="footer__text">©Copyright 2014 FreebiesXpress.com</p>
+                </div>
+                <div class="col-offset-1 col-4 footer__buttons-wrapper">
+                    <button class="footer__btn footer__btn--twitter"><i class="footer__icon fa fa-twitter"></i></button>
+                    <button class="footer__btn footer__btn--facebook"><i class="footer__icon fa fa-facebook-f"></i></button>
+                    <button class="footer__btn footer__btn--pinterest"><i class="footer__icon fa fa-pinterest-p"></i></button>
+                    <button class="footer__btn footer__btn--google-plus"><i class="footer__icon fa fa-google-plus"></i></button>
+                </div>
+            </div>
+        </footer>
 </body>
 </html>

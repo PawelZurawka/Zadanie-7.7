@@ -168,7 +168,8 @@ body {
         font-weight: bold;
         font-size: $font-size-5;
         text-transform: uppercase;
-        padding: 21.5px 45px;
+        height: 65px;
+        width: 240px;
         border-radius: 5px;
         border: none;
         transition: 0.75s;
@@ -434,84 +435,12 @@ body {
 
     &__field {
         width: 100%;
+        resize: none;
         padding: 15.5px;
-        margin-bottom: 28px;
-        font-family: $font;
-        font-size: $font-size-7;
-        font-weight: bold;
-        color: #BBBBBB;
-        border-radius: 5px;
-        border: none;
-        &::placeholder {
-            color: #BBBBBB;
-        }
     }
 
     &__message-field {
-        @extend .contact-us__field;
         resize: none;
-        padding-bottom: 25px;
-    }
-
-    &__submit-button {
-        background-color: $color;
-        color: $font-color;
-        font-family: $font;
-        font-weight: bold;
-        font-size: $font-size-5;
-        text-transform: uppercase;
-        padding: 21.5px 45px;
-        border-radius: 5px;
-        border: none;
-        transition: 0.75s;
-        &:hover {
-            background-color: $background-color;
-            color: $color;
-            cursor: pointer;
-        }
-    }
-}
-
-/* FOOTER */
-
-.footer {
-    padding: 10px;
-
-    &__text {
-       font-family: $font;
-       font-size: $font-size-7; 
-    }
-
-    &__buttons-wrapper {
-        padding-top: 15px;
-    }
-
-    &__btn {
-        @extend .team__btn;
-        background-color: #000;
-        
-    }
-
-    &__icon {
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        color:#FFF;
-    }
-
-    &__btn--twitter:hover {
-        @extend .team__btn--twitter;
-    }
-
-    &__btn--facebook:hover {
-        @extend .team__btn--facebook;
-    }
-
-    &__btn--google-plus:hover {
-        @extend .team__btn--google-plus;
-    }
-
-    &__btn--pinterest:hover {
-        @extend .team__btn--pinterest;
+        width: 100%;
     }
 }
