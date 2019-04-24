@@ -172,6 +172,8 @@ body {
         border-radius: 5px;
         border: none;
         transition: 0.75s;
+        overflow: hidden;
+        outline: none;
         &:hover {
             background-color: $background-color;
             color: $color;
@@ -366,6 +368,7 @@ body {
         height: 20px;
         background-color: #FFF;
         transition: 0.5s;
+        outline: none;
     }
 
     &__icon {
