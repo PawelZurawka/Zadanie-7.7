@@ -66,6 +66,9 @@
 
 body { margin: 0; }
 
+/* CLASS TO HIDE CONTENT (LABEL'S IN FORM) */
+.visually-hidden { /* https://snook.ca/archives/html_and_css/hiding-content-for-accessibility */ position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px 1px 1px 1px); /* IE6, IE7 */ clip: rect(1px, 1px, 1px, 1px); }
+
 /* NAV */
 .header__wrapper { background-image: url("../images/hero.png"); background-size: cover; background-position: center; height: 100vh; }
 
@@ -97,11 +100,13 @@ body { margin: 0; }
 
 .services__button { width: 80px; height: 80px; border-radius: 50%; border: 3px solid #fed136; font-size: 2.5rem; background-color: #fff; color: #fed136; transition: 0.75s; }
 
-.services__button:hover { background-color: #fed136; color: #fff; border-radius: 25%; }
-
-.services__title { font-family: "Montserrat", sans-serif; font-size: 1.125rem; margin-bottom: 15px; }
+.services__title { font-family: "Montserrat", sans-serif; font-size: 1.125rem; margin-bottom: 15px; transition: 0.75s; }
 
 .services__description { font-family: "Roboto Slab", serif; font-size: 0.875rem; color: #777777; }
+
+.services__wrapper:hover .services__button { background-color: #fed136; color: #fff; border-radius: 25%; }
+
+.services__wrapper:hover .services__title { color: #fed136; transform: scale(1.1); }
 
 /* PORTFOLIO */
 .portfolio { text-align: center; background-color: #F7F7F7; padding-bottom: 80px; }

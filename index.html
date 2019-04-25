@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,11 +19,11 @@
         <nav class="header__nav container">
             <img class="header__logo" src="images/logo.png" alt="logo">
                 <ul class="header__list">
-                    <li class="header__list-item"><a class="header__link" href="#">home</a></li>
-                    <li class="header__list-item"><a class="header__link" href="#">services</a></li>
-                    <li class="header__list-item"><a class="header__link" href="#">portfolio</a></li>
-                    <li class="header__list-item"><a class="header__link" href="#">about</a></li>
-                    <li class="header__list-item"><a class="header__link" href="#">contact</a></li>
+                    <li class="header__list-item"><a class="header__link" href="#services">services</a></li>
+                    <li class="header__list-item"><a class="header__link" href="#portfolio">portfolio</a></li>
+                    <li class="header__list-item"><a class="header__link" href="#about">about</a></li>
+                    <li class="header__list-item"><a class="header__link" href="#our-team">our team</a></li>
+                    <li class="header__list-item"><a class="header__link" href="#contact">contact</a></li>
                 </ul>
         </nav>
         </header>
@@ -35,28 +35,28 @@
             </div>
         </section>
     </div>
-        <section class="services">
+        <section class="services" id="services">
             <h3 class="services__main-title main-title">services</h3>
             <p class='services__main-subtitle main-subtitle'>Proin iaculis purus consequat sem cure.</p>
             <div class="row services__container container">
-                <div class="col-4 services__e-commerce">
+                <div class="col-4 services__e-commerce services__wrapper">
                     <button class="services__button"><i class="fa fa-shopping-basket services__icon"></i></button>
                     <h4 class="services__title">E-Commerce</h4>
                     <p class='services__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-                <div class="col-4 services__responsive-web">
+                <div class="col-4 services__responsive-web services__wrapper">
                     <button class="services__button"><i class="fa fa-laptop services__icon"></i></button>
                     <h4 class="services__title">Responsive Web</h4>
                     <p class='services__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
-                <div class="col-4 services__web-security">
+                <div class="col-4 services__web-security services__wrapper">
                     <button class="services__button"><i class="fa fa-lock services__icon"></i></button>
                     <h4 class="services__title">Web Security</h4>
                     <p class='services__description'>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
                 </div>
             </div>
         </section>
-        <section class="portfolio">
+        <section class="portfolio" id="portfolio">
             <h3 class="portfolio__main-title main-title">our portfolio</h3>
             <p class="portfolio__main-subtitle main-subtitle">Proin iaculis purus consequat sem cure</p>
             <div class="portfolio__container container">
@@ -108,7 +108,7 @@
                 </div>
             </div>
         </section>
-        <section class="about-us">
+        <section class="about-us" id="about">
             <h3 class="about-us__main-title main-title">about us</h3>
             <p class="about-us__main-subtitle main-subtitle">Proin iaculis purus consequat sem cure.</p>
             <div class="about-us__container container">
@@ -162,7 +162,7 @@
                 </div>
             </div>
         </section>
-        <section class="team">
+        <section class="team" id="our-team">
             <h3 class="team__main-title main-title">our amazing team</h3>
             <p class="team__main-subtitle main-subtitle">Proin iaculis purus consequat sem cure.</p>
             <div class="team__container container">
@@ -210,7 +210,7 @@
                     </div>
             </div>
         </section>
-        <section class="contact-us">
+        <section class="contact-us" id="contact">
             <h3 class="contact-us__main-title main-title">contact us</h3>
             <p class="contact-us__main-subtitle main-subtitle">Proin iaculis purus consequat sem cure.</p>
             <div class="contact-us__form-container container">
@@ -218,12 +218,15 @@
                     <div class="col-6">
                         <form action="" method="post">
                             <div class="contact-us__field-wrapper">
+                                <label for="name" class="visually-hidden">Your name:</label>
                                 <input class="contact-us__field" name="user_namename" type="text" id="name" placeholder="YOUR NAME *" required>
                             </div>
                             <div class="contact-us__field-wrapper">
+                                <label for="mail" class="visually-hidden">Your e-mail:</label>
                                 <input class="contact-us__field" name="email" type="email" id="mail" placeholder="YOUR E-MAIL *" required>
                             </div>
                             <div class="contact-us__field-wrapper">
+                                <label for="subject" class="visually-hidden">Subject:</label>
                                 <input class="contact-us__field" name="subject" type="text" id="subject" placeholder="SUBJECT">
                             </div>
                         </form>
@@ -231,6 +234,7 @@
                     <div class="col-6">
                         <form action="" method="post"> 
                             <div class="contact-us__message-field-wrapper">
+                                <label for="msg" class="visually-hidden">Your message:</label>
                                 <textarea class="contact-us__message-field" id="msg" name="user_message" rows="9" placeholder="YOUR MESSAGE*" required></textarea>
                             </div>
                         </form>
