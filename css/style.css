@@ -98,13 +98,13 @@ body { margin: 0; }
 /* SERVICES */
 .services { text-align: center; padding-bottom: 80px; }
 
-.services__button { width: 80px; height: 80px; border-radius: 50%; border: 3px solid #fed136; font-size: 2.5rem; background-color: #fff; color: #fed136; transition: 0.75s; }
+.services__icon { width: 80px; height: 80px; border-radius: 50%; padding-top: 15px; border: 3px solid #fed136; font-size: 2.5rem; background-color: #fff; color: #fed136; transition: 0.75s; }
 
 .services__title { font-family: "Montserrat", sans-serif; font-size: 1.125rem; margin-bottom: 15px; transition: 0.75s; }
 
 .services__description { font-family: "Roboto Slab", serif; font-size: 0.875rem; color: #777777; }
 
-.services__wrapper:hover .services__button { background-color: #fed136; color: #fff; border-radius: 25%; }
+.services__wrapper:hover .services__icon { background-color: #fed136; color: #fff; border-radius: 25%; }
 
 .services__wrapper:hover .services__title { color: #fed136; transform: scale(1.1); }
 
