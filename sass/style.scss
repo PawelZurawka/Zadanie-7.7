@@ -28,6 +28,30 @@ $font-size-7: $font-size-base * 0.875; //14px
 $grid-columns: 12;
 $grid-offset-columns: 12;
 
+/* MIXINS */
+@mixin breakpoint($point) {
+    @if $point == sm {
+        @media (max-width: 767px) {
+            @content;
+        }
+    }
+    @else if $point == md {
+        @media (min-width: 768px) {
+            @content;
+        }
+    }
+    @else if $point == lg {
+        @media (min-width: 992px) {
+            @content;
+        }
+    }
+    @else if $point == xl {
+        @media (min-width: 1200px) {
+            @content;
+        }
+    }
+}
+
 /* REUSABLE CLASSES */
 .container {
     max-width: 940px;
@@ -40,6 +64,10 @@ $grid-offset-columns: 12;
     text-transform: uppercase;
     padding-top: 80px;
     margin: 0;
+    @include breakpoint (sm) {
+        padding-top: 40px;
+        font-size: 36px;
+    }
 }
 
 .main-subtitle {
@@ -49,20 +77,19 @@ $grid-offset-columns: 12;
     margin-top: 10px;
     padding-bottom: 60px;
     color: $font-color-second;
+    @include breakpoint (sm) {
+        padding-bottom: 30px;
+    }
 }
 
 /* GRID */
-.row::before, 
-.row::after {
-    content: "";
-    display: table;
-    clear: both;
+.row {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 [class*="col-"] {
-    float: left;
     padding: 10px;
-    min-height: 1px;
 }
 
 @for $i from 1 through $grid-columns {
@@ -75,6 +102,32 @@ $grid-offset-columns: 12;
     .col-offset-#{$i} {
         margin-left: percentage($i / $grid-offset-columns);
     }
+}
+
+@mixin grid($prefix) {
+    @for $i from 1 through 12 {
+      .col-#{$prefix}-#{$i} {
+        $width: 100% / 12 * $i;
+        flex: 0 0 $width;
+        max-width: $width;
+      }
+    }
+}
+
+@media(max-width: 767px) {
+    @include grid('sm');
+}
+  
+@media(min-width: 768px) {
+    @include grid('md');
+}
+  
+@media(min-width: 992px) {
+    @include grid('lg');
+}
+  
+@media(min-width: 1200px) {
+    @include grid('xl');
 }
 
 /* GLOBAL STYLES */
@@ -106,11 +159,21 @@ body {
 .header {
     overflow: auto;
 
+    &__nav {
+        @include breakpoint (sm) {
+            text-align: center;
+        }
+    }
     &__logo {
         display: block;
         float: left;
         padding: 15px 0;
         margin-top: 20px;
+        @include breakpoint (sm) {
+            margin-top: 0;
+            float: none;
+            display: inline-block;
+        }
     }
 
     &__list {
@@ -119,6 +182,9 @@ body {
         padding: 0;
         list-style-type: none;
         float: right;
+        @include breakpoint (sm) {
+            float: none;
+        }
     }
 
     &__list-item {
@@ -142,6 +208,8 @@ body {
 
 /* HERO */
 .hero {
+    position: relative;
+
     &__slogan {
         display: flex;
         flex-direction: column; 
@@ -149,7 +217,10 @@ body {
         justify-content: center; 
         align-items: center;
         height: 100%;
-        margin-top: 25vh;
+        margin-top: 20vh;
+        @include breakpoint (sm) {
+            margin-top: 100px;
+        }
     }
 
     &__title {
@@ -159,6 +230,10 @@ body {
         font-size: $font-size-2;
         color: $font-color;
         text-transform: capitalize;
+        @include breakpoint (sm) {
+            font-size: $font-size-3;
+            margin-bottom: 15px;
+        }
     }
 
     &__subtitle {
@@ -168,6 +243,21 @@ body {
         text-transform: uppercase;
         margin-top: 15px;
         margin-bottom: 75px;
+        @include breakpoint (sm) {
+            margin-bottom: 30px;
+            font-size: $font-size-2;
+        }
+    }
+
+    &__button-wrapper {
+        text-align: center;
+        margin-top: 90px;
+        @include breakpoint (md) {
+            margin-top: 45px;
+        }
+        @include breakpoint (xl) {
+            margin-top: 90px;
+        }
     }
 
     &__button {
@@ -195,6 +285,9 @@ body {
 .services {
     text-align: center;
     padding-bottom: 80px;
+    @include breakpoint (sm) {
+        padding-bottom: 40px;
+    }
 
     &__icon {
         width: 80px;
@@ -240,6 +333,9 @@ body {
     text-align: center;
     background-color: $background-color;
     padding-bottom: 80px;
+    @include breakpoint (sm) {
+        padding-bottom: 40px;
+    }
 
     &__wrapper {
         background-color: #fff;
@@ -327,6 +423,9 @@ body {
             top: 86%;
             left: 50%;
             transform: translate(-50%, -50%);
+            @include breakpoint (sm) {
+                display: none;
+            }
         }
     }
 
