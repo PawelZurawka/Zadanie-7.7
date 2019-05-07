@@ -90,6 +90,7 @@ $grid-offset-columns: 12;
 
 [class*="col-"] {
     padding: 10px;
+    overflow: hidden;
 }
 
 @for $i from 1 through $grid-columns {
@@ -203,6 +204,11 @@ body {
         &:hover {
             color: $color;
         }
+        @include breakpoint (sm) {
+            &:hover {
+                color: $font-color;
+            }
+        }
     }
 }
 
@@ -219,7 +225,7 @@ body {
         height: 100%;
         margin-top: 20vh;
         @include breakpoint (sm) {
-            margin-top: 100px;
+            margin-top: 20px;
         }
     }
 
@@ -252,7 +258,13 @@ body {
     &__button-wrapper {
         text-align: center;
         margin-top: 90px;
+        @include breakpoint (sm) {
+            margin-top: 10px;
+        }
         @include breakpoint (md) {
+            margin-top: -30px;
+        }
+        @include breakpoint (lg) {
             margin-top: 45px;
         }
         @include breakpoint (xl) {
@@ -277,6 +289,12 @@ body {
             background-color: $background-color;
             color: $color;
             cursor: pointer;
+        }
+        @include breakpoint (sm) {
+            &:hover {
+                background-color: $color;
+                color: $font-color;
+            }
         }
     }
 }
@@ -314,18 +332,27 @@ body {
         color: $font-color-second;
     }
 
+    
     &__wrapper:hover {
         .services__icon {
             background-color: $color;
             color: #fff;
             border-radius: 25%;
+            @include breakpoint (sm) {
+                background-color: #fff;
+                color: $color;
+                    border-radius: 50%;
+            }
         }
         .services__title {
             color: $color;
             transform: scale(1.1);
-        }
+            @include breakpoint (sm) {
+                color: #000;
+                transform: scale(1);
+            }
+        }   
     }
-
 }
 
 /* PORTFOLIO */
@@ -368,6 +395,9 @@ body {
 .about-us {
     text-align: center;
     padding-bottom: 80px;
+    @include breakpoint (sm) {
+        padding-bottom: 40px;
+    }
 
     &__title-left {
         font-family: $font;
@@ -376,6 +406,9 @@ body {
         text-align: right;
         margin-top: 10px;
         margin-bottom: 0;
+        @include breakpoint (sm) {
+            font-size: $font-size-6;
+        }
     }
 
     &__subtitle-left {
@@ -385,6 +418,9 @@ body {
         text-align: right;
         margin-top: 0;
         margin-bottom: 0;
+        @include breakpoint (sm) {
+            font-size: $font-size-6;
+        }
     }
 
     &__description-left {
@@ -392,6 +428,9 @@ body {
         font-size: $font-size-7;
         text-align: right;
         color: $font-color-second;
+        @include breakpoint (sm) {
+            font-size: 12px;
+        }
     }
     &__title-right {
         @extend .about-us__title-left;
@@ -410,10 +449,17 @@ body {
 
     &__photo {
         margin-bottom: 80px;
+        @include breakpoint (sm) {
+            transform: scale(0.7);
+            margin-bottom: 0;
+        }
     }
 
     &__center-column {  
         position: relative;
+        @include breakpoint (sm) {
+            text-align: left;
+        }
         &::after {
             content:'';
             position: absolute;
@@ -429,8 +475,26 @@ body {
         }
     }
 
+    &__mobile-right {
+        @include breakpoint (sm) {
+            padding: 0;
+            margin: 0;
+        }
+    }
+
+    &__mobile-left {
+        @include breakpoint (sm) {
+            padding: 0;
+            margin: 0;
+            text-align: right;
+        }
+    }
+
     &__last-row {
         position: relative;
+        @include breakpoint (sm) {
+            transform: scale(0.7);
+        }
     }
 
     &__span {
@@ -452,10 +516,16 @@ body {
     text-align: center;
     background-color: $background-color;
     padding-bottom: 60px;
+    @include breakpoint (sm) {
+        padding-bottom: 40px;
+    }
 
     &__photo {
         border: 8px solid #FFF;
         border-radius: 50%;
+        @include breakpoint (sm) {
+            transform: scale(0.8);
+        }
     }
 
     &__name {
@@ -492,24 +562,44 @@ body {
         background-color: #4099FF;
         border: 3px solid #4099FF;
         color: #FFF;
+        @include breakpoint (sm) {
+            color: #000;
+            border: 3px solid #000;
+            background-color: #FFF;
+        }
     }
 
     &__btn--facebook:hover {
         background-color: #3B5998;
         border: 3px solid #3B5998;
         color: #FFF;
+        @include breakpoint (sm) {
+            color: #000;
+            border: 3px solid #000;
+            background-color: #FFF;
+        }
     }
 
     &__btn--google-plus:hover {
         background-color: #DB5A3C;
         border: 3px solid #DB5A3C;
         color: #FFF;
+        @include breakpoint (sm) {
+            color: #000;
+            border: 3px solid #000;
+            background-color: #FFF;
+        }
     }
 
     &__btn--pinterest:hover {
         background-color: #cb2028;
         border: 3px solid #cb2028;
         color: #FFF;
+        @include breakpoint (sm) {
+            color: #000;
+            border: 3px solid #000;
+            background-color: #FFF;
+        }
     }
 
     &__description {
@@ -523,14 +613,27 @@ body {
     }
 }
 
-/* LOGOS */
+/* LOGO */
 
-.logos__wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 60px;
-    flex-wrap: wrap;
+.logo {
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+        padding: 60px;
+        flex-wrap: wrap;
+        @include breakpoint (sm) {
+            padding: 40px 20px;
+            flex-direction: column;
+        }
+    }
+
+    &__photo {
+        @include breakpoint (sm) {
+            padding: 20px 0;
+        }
+    }
 }
 
 /* CONTACT US*/
@@ -542,6 +645,9 @@ body {
     background-image: url('../images/Map-image.png');
     background-repeat: no-repeat;
     background-position: right;
+    @include breakpoint (sm) {
+        padding-bottom: 40px;
+    }
 
     &__main-title {
         color: #FFF;
@@ -581,11 +687,19 @@ body {
     &__text {
        font-family: $font;
        font-size: $font-size-7; 
+       @include breakpoint (sm) {
+        text-align: center;
+    }
     }
 
     &__buttons-wrapper {
         padding-top: 15px;
         margin-left: 60px;
+        @include breakpoint (sm) {
+            margin-left: 0;
+            padding-top: 0;
+            text-align: center;
+        }
     }
 
     &__btn {
@@ -601,17 +715,29 @@ body {
 
     &__btn--twitter:hover {
         @extend .team__btn--twitter;
+        @include breakpoint (sm) {
+            background-color: #000;
+        }
     }
 
     &__btn--facebook:hover {
         @extend .team__btn--facebook;
+        @include breakpoint (sm) {
+            background-color: #000;
+        }
     }
 
     &__btn--google-plus:hover {
         @extend .team__btn--google-plus;
+        @include breakpoint (sm) {
+            background-color: #000;
+        }
     }
 
     &__btn--pinterest:hover {
         @extend .team__btn--pinterest;
+        @include breakpoint (sm) {
+            background-color: #000;
+        }
     }
 }

@@ -16,7 +16,7 @@
 /* GRID */
 .row { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-[class*="col-"] { padding: 10px; }
+[class*="col-"] { padding: 10px; overflow: hidden; }
 
 .col-1 { width: 8.33333%; }
 
@@ -147,12 +147,14 @@ body { margin: 0; }
 
 .header__link:hover { color: #fed136; }
 
+@media (max-width: 767px) { .header__link:hover { color: #FFF; } }
+
 /* HERO */
 .hero { position: relative; }
 
 .hero__slogan { display: -ms-flexbox; display: flex; -ms-flex-direction: column; flex-direction: column; text-align: center; -ms-flex-pack: center; justify-content: center; -ms-flex-align: center; align-items: center; height: 100%; margin-top: 20vh; }
 
-@media (max-width: 767px) { .hero__slogan { margin-top: 100px; } }
+@media (max-width: 767px) { .hero__slogan { margin-top: 20px; } }
 
 .hero__title { font-family: "Droid Serif", serif; font-style: italic; font-weight: normal; font-size: 2.5rem; color: #FFF; text-transform: capitalize; }
 
@@ -164,13 +166,19 @@ body { margin: 0; }
 
 .hero__button-wrapper { text-align: center; margin-top: 90px; }
 
-@media (min-width: 768px) { .hero__button-wrapper { margin-top: 45px; } }
+@media (max-width: 767px) { .hero__button-wrapper { margin-top: 10px; } }
+
+@media (min-width: 768px) { .hero__button-wrapper { margin-top: -30px; } }
+
+@media (min-width: 992px) { .hero__button-wrapper { margin-top: 45px; } }
 
 @media (min-width: 1200px) { .hero__button-wrapper { margin-top: 90px; } }
 
 .hero__button, .contact-us__submit-button { background-color: #fed136; color: #FFF; font-family: "Montserrat", sans-serif; font-weight: bold; font-size: 1.125rem; text-transform: uppercase; padding: 21.5px 45px; border-radius: 5px; border: none; transition: 0.75s; overflow: hidden; outline: none; }
 
 .hero__button:hover, .contact-us__submit-button:hover { background-color: #F7F7F7; color: #fed136; cursor: pointer; }
+
+@media (max-width: 767px) { .hero__button:hover, .contact-us__submit-button:hover { background-color: #fed136; color: #FFF; } }
 
 /* SERVICES */
 .services { text-align: center; padding-bottom: 80px; }
@@ -185,7 +193,11 @@ body { margin: 0; }
 
 .services__wrapper:hover .services__icon { background-color: #fed136; color: #fff; border-radius: 25%; }
 
+@media (max-width: 767px) { .services__wrapper:hover .services__icon { background-color: #fff; color: #fed136; border-radius: 50%; } }
+
 .services__wrapper:hover .services__title { color: #fed136; transform: scale(1.1); }
+
+@media (max-width: 767px) { .services__wrapper:hover .services__title { color: #000; transform: scale(1); } }
 
 /* PORTFOLIO */
 .portfolio { text-align: center; background-color: #F7F7F7; padding-bottom: 80px; }
@@ -203,11 +215,19 @@ body { margin: 0; }
 /*ABOUT US*/
 .about-us { text-align: center; padding-bottom: 80px; }
 
+@media (max-width: 767px) { .about-us { padding-bottom: 40px; } }
+
 .about-us__title-left, .about-us__title-right { font-family: "Montserrat", sans-serif; font-size: 1.125rem; text-transform: uppercase; text-align: right; margin-top: 10px; margin-bottom: 0; }
+
+@media (max-width: 767px) { .about-us__title-left, .about-us__title-right { font-size: 1rem; } }
 
 .about-us__subtitle-left, .about-us__subtitle-right { font-family: "Montserrat", sans-serif; font-size: 1.125rem; text-transform: capitalize; text-align: right; margin-top: 0; margin-bottom: 0; }
 
+@media (max-width: 767px) { .about-us__subtitle-left, .about-us__subtitle-right { font-size: 1rem; } }
+
 .about-us__description-left, .about-us__description-right { font-family: "Roboto Slab", serif; font-size: 0.875rem; text-align: right; color: #777777; }
+
+@media (max-width: 767px) { .about-us__description-left, .about-us__description-right { font-size: 12px; } }
 
 .about-us__title-right { text-align: left; }
 
@@ -217,20 +237,34 @@ body { margin: 0; }
 
 .about-us__photo { margin-bottom: 80px; }
 
+@media (max-width: 767px) { .about-us__photo { transform: scale(0.7); margin-bottom: 0; } }
+
 .about-us__center-column { position: relative; }
+
+@media (max-width: 767px) { .about-us__center-column { text-align: left; } }
 
 .about-us__center-column::after { content: ''; position: absolute; height: 110px; width: 3px; background-color: #f1f1f1; top: 86%; left: 50%; transform: translate(-50%, -50%); }
 
 @media (max-width: 767px) { .about-us__center-column::after { display: none; } }
 
+@media (max-width: 767px) { .about-us__mobile-right { padding: 0; margin: 0; } }
+
+@media (max-width: 767px) { .about-us__mobile-left { padding: 0; margin: 0; text-align: right; } }
+
 .about-us__last-row { position: relative; }
+
+@media (max-width: 767px) { .about-us__last-row { transform: scale(0.7); } }
 
 .about-us__span { position: absolute; font-size: 1.125rem; text-transform: uppercase; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #FFF; font-weight: bold; line-height: 30px; }
 
 /* TEAM */
 .team { text-align: center; background-color: #F7F7F7; padding-bottom: 60px; }
 
+@media (max-width: 767px) { .team { padding-bottom: 40px; } }
+
 .team__photo { border: 8px solid #FFF; border-radius: 50%; }
+
+@media (max-width: 767px) { .team__photo { transform: scale(0.8); } }
 
 .team__name { font-family: "Montserrat", sans-serif; font-size: 1rem; font-weight: bold; text-transform: capitalize; margin-bottom: 0; }
 
@@ -240,19 +274,33 @@ body { margin: 0; }
 
 .team__btn--twitter:hover, .footer__btn--twitter:hover { background-color: #4099FF; border: 3px solid #4099FF; color: #FFF; }
 
+@media (max-width: 767px) { .team__btn--twitter:hover, .footer__btn--twitter:hover { color: #000; border: 3px solid #000; background-color: #FFF; } }
+
 .team__btn--facebook:hover, .footer__btn--facebook:hover { background-color: #3B5998; border: 3px solid #3B5998; color: #FFF; }
+
+@media (max-width: 767px) { .team__btn--facebook:hover, .footer__btn--facebook:hover { color: #000; border: 3px solid #000; background-color: #FFF; } }
 
 .team__btn--google-plus:hover, .footer__btn--google-plus:hover { background-color: #DB5A3C; border: 3px solid #DB5A3C; color: #FFF; }
 
+@media (max-width: 767px) { .team__btn--google-plus:hover, .footer__btn--google-plus:hover { color: #000; border: 3px solid #000; background-color: #FFF; } }
+
 .team__btn--pinterest:hover, .footer__btn--pinterest:hover { background-color: #cb2028; border: 3px solid #cb2028; color: #FFF; }
+
+@media (max-width: 767px) { .team__btn--pinterest:hover, .footer__btn--pinterest:hover { color: #000; border: 3px solid #000; background-color: #FFF; } }
 
 .team__description { max-width: 600px; text-align: center; margin: 20px auto; font-family: "Roboto Slab", serif; font-size: 1rem; color: #777777; margin-bottom: 30px; }
 
-/* LOGOS */
-.logos__wrapper { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: distribute; justify-content: space-around; padding: 60px; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+/* LOGO */
+.logo__wrapper { display: -ms-flexbox; display: flex; -ms-flex-align: center; align-items: center; -ms-flex-pack: distribute; justify-content: space-around; padding: 60px; -ms-flex-wrap: wrap; flex-wrap: wrap; }
+
+@media (max-width: 767px) { .logo__wrapper { padding: 40px 20px; -ms-flex-direction: column; flex-direction: column; } }
+
+@media (max-width: 767px) { .logo__photo { padding: 20px 0; } }
 
 /* CONTACT US*/
 .contact-us { text-align: center; padding-bottom: 80px; background-color: #222; background-image: url("../images/Map-image.png"); background-repeat: no-repeat; background-position: right; }
+
+@media (max-width: 767px) { .contact-us { padding-bottom: 40px; } }
 
 .contact-us__main-title { color: #FFF; }
 
@@ -269,8 +317,20 @@ body { margin: 0; }
 
 .footer__text { font-family: "Montserrat", sans-serif; font-size: 0.875rem; }
 
+@media (max-width: 767px) { .footer__text { text-align: center; } }
+
 .footer__buttons-wrapper { padding-top: 15px; margin-left: 60px; }
+
+@media (max-width: 767px) { .footer__buttons-wrapper { margin-left: 0; padding-top: 0; text-align: center; } }
 
 .footer__btn { background-color: #000; text-align: center; margin-right: 5px; }
 
 .footer__icon { color: #FFF; }
+
+@media (max-width: 767px) { .footer__btn--twitter:hover { background-color: #000; } }
+
+@media (max-width: 767px) { .footer__btn--facebook:hover { background-color: #000; } }
+
+@media (max-width: 767px) { .footer__btn--google-plus:hover { background-color: #000; } }
+
+@media (max-width: 767px) { .footer__btn--pinterest:hover { background-color: #000; } }
