@@ -16,7 +16,9 @@
 /* GRID */
 .row { display: -ms-flexbox; display: flex; -ms-flex-wrap: wrap; flex-wrap: wrap; }
 
-[class*="col-"] { padding: 10px; overflow: hidden; }
+[class*="col-"] { padding: 10px; }
+
+@media (max-width: 767px) { [class*="col-"] { overflow: hidden; } }
 
 .col-1 { width: 8.33333%; }
 
@@ -204,13 +206,17 @@ body { margin: 0; }
 
 @media (max-width: 767px) { .portfolio { padding-bottom: 40px; } }
 
-.portfolio__wrapper { background-color: #fff; height: 100%; line-height: 0; }
+.portfolio__wrapper { background-color: #fff; height: 100%; }
 
 .portfolio__image { width: 100%; }
 
-.portfolio__title { font-size: 1.125rem; font-family: "Montserrat", sans-serif; text-transform: capitalize; margin-top: 35px; }
+.portfolio__title { font-size: 1.125rem; font-family: "Montserrat", sans-serif; text-transform: capitalize; margin-top: 20px; margin-bottom: 0; }
 
-.portfolio__description { font-family: "Droid Serif", serif; font-size: 0.875rem; font-style: italic; text-transform: capitalize; margin-bottom: 30px; color: #777777; }
+@media (max-width: 767px) { .portfolio__title { font-size: 16px; } }
+
+.portfolio__description { font-family: "Droid Serif", serif; font-size: 0.875rem; font-style: italic; text-transform: capitalize; color: #777777; margin-top: 5px; margin-bottom: 20px; }
+
+@media (max-width: 767px) { .portfolio__description { font-size: 12px; } }
 
 /*ABOUT US*/
 .about-us { text-align: center; padding-bottom: 80px; }

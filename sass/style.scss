@@ -90,7 +90,9 @@ $grid-offset-columns: 12;
 
 [class*="col-"] {
     padding: 10px;
-    overflow: hidden;
+    @include breakpoint (sm) {
+        overflow: hidden;
+    }
 }
 
 @for $i from 1 through $grid-columns {
@@ -367,7 +369,6 @@ body {
     &__wrapper {
         background-color: #fff;
         height: 100%;
-        line-height: 0;
     }
 
     &__image {
@@ -378,7 +379,11 @@ body {
         font-size: $font-size-5;
         font-family: $font;
         text-transform: capitalize;
-        margin-top: 35px;
+        margin-top: 20px;
+        margin-bottom: 0;
+        @include breakpoint (sm) {
+            font-size: 16px;
+        }
     }
 
     &__description {
@@ -386,8 +391,12 @@ body {
         font-size: $font-size-7;
         font-style: italic;
         text-transform: capitalize;
-        margin-bottom: 30px;
         color: $font-color-second;
+        margin-top: 5px;
+        margin-bottom: 20px;
+        @include breakpoint (sm) {
+            font-size: 12px;
+        }
     }
 }
 
