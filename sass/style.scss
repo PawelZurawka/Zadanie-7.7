@@ -504,6 +504,9 @@ body {
         @include breakpoint (sm) {
             transform: scale(0.7);
         }
+        & > div {
+            width: 100%;
+        }
     }
 
     &__span {

@@ -261,6 +261,8 @@ body { margin: 0; }
 
 @media (max-width: 767px) { .about-us__last-row { transform: scale(0.7); } }
 
+.about-us__last-row > div { width: 100%; }
+
 .about-us__span { position: absolute; font-size: 1.125rem; text-transform: uppercase; top: 50%; left: 50%; transform: translate(-50%, -50%); color: #FFF; font-weight: bold; line-height: 30px; }
 
 /* TEAM */
